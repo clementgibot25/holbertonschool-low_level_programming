@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main: prints a random number
+ * main - prints a random number
  * and specify whether it's greater than 5, less than 6 or 0
  *
  * Return: always 0
