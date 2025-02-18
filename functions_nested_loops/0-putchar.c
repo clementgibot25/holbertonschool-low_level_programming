@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/*
- * main - program that prints _putchar
+/**
+ * main - Prints "_putchar" followed by a new line.
  *
- * Return: 0
+ * Return: Always 0.
  */
 	int main(void)
 	{
@@ -16,5 +16,6 @@
 		putchar("a");
 		putchar("r");
 		putchar("\n");
+
 		return (0);
 	}
