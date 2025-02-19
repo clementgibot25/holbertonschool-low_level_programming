@@ -3,8 +3,7 @@
 /**
  * jack_bauer - count every minutes in 24 hours
  *
- *
- * Return: 0
+ *Return: 0
  */
 
 void jack_bauer(void)
@@ -15,9 +14,12 @@ void jack_bauer(void)
 	{
 		for (m = 0; m <= 59; m++)
 		{
-			_putchar(h);
+			_putchar((h / 10) + '0');
+			_putchar((h % 10) + '0');
 			_putchar(':');
-			_putchar(m);
+			_putchar((m / 10) + '0');
+			_putchar((m % 10) + '0');
+			_putchar('\n');
 		}
 	}
 }
