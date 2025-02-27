@@ -5,7 +5,7 @@
  * @str: string to be converted
  * Return: the int converted from the string, or 0 if no valid number is found
  */
-int atoi(char *str)
+int _atoi(char *str)
 {
 	int sign = 1, num = 0, idx = 0;
 	int has_digit = 0;
