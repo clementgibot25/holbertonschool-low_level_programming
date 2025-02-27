@@ -5,6 +5,7 @@
  * _strncpy - copy string pointed to by src to dest
  * @dest: destination
  * @src: string
+ * @n: number
  *
  * Return: pointer to dest
  */
