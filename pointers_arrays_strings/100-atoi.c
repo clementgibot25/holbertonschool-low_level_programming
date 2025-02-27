@@ -1,32 +1,29 @@
 #include "main.h"
 
 /**
- * atoi - converts a string to an integer with error handling
- * @str: string to be converted
- * Return: the int converted from the string, or 0 if no valid number is found
+ * _atoi - Converts a string to an integer.
+ * @str: The string to be converted.
+ *
+ * Return: The integer value of the string, or 0 if no numbers are found.
  */
 int _atoi(char *str)
 {
-	int sign = 1, num = 0, idx = 0;
-	int has_digit = 0;
+	int sign = 1, num = 0, started = 0;
 
-	while (str[idx] == ' ')
-		idx++;
-
-	if (str[idx] == '-' || str[idx] == '+') {
-		if (str[idx] == '-')
-			sign = -1;
-		idx++;
+	while (*str)
+	{
+		if (*str == '-')
+			sign *= -1;
+		else if (*str >= '0' && *str <= '9')
+		{
+			started = 1;
+			if (num > (2147483647 - (*str - '0')) / 10)
+				return (sign == 1 ? 2147483647 : -2147483648);
+			num = num * 10 + (*str - '0');
+		}
+		else if (started)
+			break;
+		str++;
 	}
-
-	while (str[idx] >= '0' && str[idx] <= '9') {
-		num = num * 10 + (str[idx] - '0');
-		idx++;
-		has_digit = 1;
-	}
-
-	if (has_digit)
-		return num * sign;
-	else
-		return 0;
+	return (num * sign);
 }
