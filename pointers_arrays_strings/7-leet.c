@@ -15,11 +15,13 @@ char *leet(char *s)
 	{
 	i++;
 	for (i = 1; s[i] != '\0'; i++)
-	if(s[i] == min[i] || s[i] == maj[i])
-		{
-			s[i] = num[j];
-			j++;
-		}
+	{
+		if(s[i] == min[i] || s[i] == maj[i])
+			{
+				s[i] = num[j];
+				j++;
+			}
+	}
 	}
 	return (s);
 }
