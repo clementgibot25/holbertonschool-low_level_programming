@@ -15,7 +15,7 @@ char *leet(char *s)
 	{
 	for (j = 1; s[j] != '\0'; j++)
 	{
-		if(s[i] == min[i] || s[i] == maj[i])
+		if(s[i] == min[j] || s[i] == maj[j])
 			{
 				s[i] = num[j];
 			}
