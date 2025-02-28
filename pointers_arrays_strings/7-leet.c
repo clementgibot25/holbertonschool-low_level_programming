@@ -13,7 +13,7 @@ char *leet(char *s)
 
 	while(s[i] != '\0')
 	{
-		for (j = 0; s[j] < 5; j++)
+		for (j = 0; j < 5; j++)
 		{
 			if(s[i] == min[j] || s[i] == maj[j])
 				{
