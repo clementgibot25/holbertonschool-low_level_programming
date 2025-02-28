@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include "main.h"
 
 char *cap_string(char *s)
 {
@@ -10,7 +10,7 @@ char *cap_string(char *s)
 	}
 	for(i=1;s[i]!='\0';i++)
 	{
-		if(s[i-1]==32)
+		if(s[i-1]==32 ||',' || ';' || '.' || '!' || '?' || '"' || '(' || ')' || '{' || '}')
 		{
 				if(s[i]>=97 &&s[i]<=122)
 				{
