@@ -8,10 +8,10 @@
  * Return: number of bytes in the initial segment of s
  * which only contain characters from accept
  */
-unsigned int _strpbrk(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = 0;
-	while (s[i] != '\0' && _strpbrk(accept, s[i]) != NULL)
+	while (s[i] != '\0' && _strspn(accept, s[i]) != NULL)
 		i++;
 	return (i);
 }
