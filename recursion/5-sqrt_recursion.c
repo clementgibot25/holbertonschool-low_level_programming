@@ -9,17 +9,24 @@
 int _sqrt_recursion(int n)
 {
     if (n < 0)
-        return -1;
+        return (-1);
     if (n == 0 || n == 1)
-        return n;
+        return (n);
     return _sqrt_recursion_iteration(n, 1);
 }
+/**
+ * _sqrt_recursion_iteration - returns the natural square root of a number
+ * @n: number to calculate the square root of
+ * @i: current number to check
+ *
+ * Return: the resulting square root or -1 if no natural square root exist
+ */
 int _sqrt_recursion_iteration(int n, int i)
 {
     if (i * i == n)
-        return i;
+        return (i);
     if (i * i > n)
-        return -1;
+        return (-1);
 
     i++;
     return _sqrt_recursion_iteration(n, i);
