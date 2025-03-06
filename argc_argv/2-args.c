@@ -9,9 +9,11 @@
  *
  * Return: 0 on success.
  */
-int main(int argc, char *argv[]) {
-    printf("%d\n", argc);
-    for (int i = 0; i < argc; i++) {
+int main(int argc, char *argv[])
+{
+    int i;
+    for (int i = 0; i < argc; i++)
+    {
         printf("%d : %s\n", i, argv[i]);
     }
     return 0;
