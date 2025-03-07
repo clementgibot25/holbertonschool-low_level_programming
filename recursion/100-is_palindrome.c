@@ -7,8 +7,9 @@
  */
 int is_palindrome(char *s)
 {
-    int len = _strlen_recursion(s);
-    return check_pal(s, 0, len - 1);
+	int len = _strlen_recursion(s);
+
+	return (check_pal(s, 0, len - 1));
 }
 
 /**
@@ -20,11 +21,11 @@ int is_palindrome(char *s)
  */
 int check_pal(char *s, int i, int j)
 {
-    if (i >= j)
-        return 1;
-    if (s[i] != s[j])
-        return 0;
-    return check_pal(s, i + 1, j - 1);
+	if (i >= j)
+		return (1);
+	if (s[i] != s[j])
+		return (0);
+	return (check_pal(s, i + 1, j - 1));
 }
 
 /**
@@ -34,7 +35,7 @@ int check_pal(char *s, int i, int j)
  */
 int _strlen_recursion(char *s)
 {
-    if (*s == '\0')
-        return 0;
-    return 1 + _strlen_recursion(s + 1);
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
