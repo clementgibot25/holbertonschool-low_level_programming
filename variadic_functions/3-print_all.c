@@ -6,16 +6,17 @@
  * print_all - prints anything
  * @format: a list of types of arguments passed to the function
  */
-void print_all(const char *format, ...)
+void print_all(const char * const format, ...)
 {
 	va_list args;
 	char *str, *sep = "";
+	const char *fmt = format;
 
 	va_start(args, format);
 
-	while (*format)
+	while (*fmt)
 	{
-		switch (*format++)
+		switch (*fmt++)
 		{
 			case 'c':
 				printf("%s%c", sep, va_arg(args, int));
